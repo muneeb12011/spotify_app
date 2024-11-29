@@ -1,0 +1,250 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Spotify Clone
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #FFFFFF;
+        }
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            background-color: #000000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .sidebar img {
+            width: 131px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            color: #B3B3B3;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar a:hover {
+            color: #FFFFFF;
+        }
+        .sidebar a i {
+            margin-right: 10px;
+        }
+        .sidebar .nav-section {
+            margin-top: 20px;
+        }
+        .main-content {
+            margin-left: 240px;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .search-bar {
+            background-color: #282828;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            color: #FFFFFF;
+            width: 300px;
+        }
+        .header .user-profile {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-profile img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .header .user-profile span {
+            font-size: 14px;
+        }
+        .playlist {
+            margin-top: 20px;
+        }
+        .playlist h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .playlist .playlist-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            background-color: #282828;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .playlist .playlist-item:hover {
+            background-color: #333333;
+        }
+        .playlist .playlist-item img {
+            width: 64px;
+            height: 64px;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+        .playlist .playlist-item .playlist-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .playlist .playlist-item .playlist-info span {
+            font-size: 14px;
+        }
+        .playlist .playlist-item .playlist-info span.title {
+            font-weight: 500;
+        }
+        .playlist .playlist-item .playlist-info span.artist {
+            color: #B3B3B3;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="sidebar">
+   <img alt="Spotify logo with green text on a black background" height="40" src="https://storage.googleapis.com/a1aa/image/h4OqbagqzabON1fqHfoiGM0O6dMcBaDJ4l95jx7HMEy7U01TA.jpg" width="131"/>
+   <a class="home-link" href="#">
+    <i class="fas fa-home">
+    </i>
+    Home
+   </a>
+   <a class="search-link" href="#">
+    <i class="fas fa-search">
+    </i>
+    Search
+   </a>
+   <a class="library-link" href="#">
+    <i class="fas fa-book">
+    </i>
+    Your Library
+   </a>
+   <div class="nav-section">
+    <a class="create-playlist-link" href="#">
+     <i class="fas fa-plus-square">
+     </i>
+     Create Playlist
+    </a>
+    <a class="liked-songs-link" href="#">
+     <i class="fas fa-heart">
+     </i>
+     Liked Songs
+    </a>
+   </div>
+  </div>
+  <div class="main-content">
+   <div class="header">
+    <input class="search-bar" placeholder="Search for Artists, Songs, or Podcasts" type="text"/>
+    <div class="user-profile">
+     <img alt="User profile picture with a generic avatar" height="32" src="https://storage.googleapis.com/a1aa/image/g3DNaesGiqQRHybeWYr9wRxjBoCueWGeipVXTj0Txo88TRXPB.jpg" width="32"/>
+     <span>
+      Username
+     </span>
+    </div>
+   </div>
+   <div class="playlist">
+    <h2>
+     Recently Played
+    </h2>
+    <div class="playlist-item">
+     <img alt="Album cover with abstract art in vibrant colors" height="64" src="https://storage.googleapis.com/a1aa/image/f9CeNBEnEmuEA00n6jaW93Fx37klTRS3KnO7psf8lH1CqornA.jpg" width="64"/>
+     <div class="playlist-info">
+      <span class="title">
+       Song Title 1
+      </span>
+      <span class="artist">
+       Artist Name 1
+      </span>
+     </div>
+    </div>
+    <div class="playlist-item">
+     <img alt="Album cover with a black and white photo of the artist" height="64" src="https://storage.googleapis.com/a1aa/image/RR1iJgCQamKLA1rbbovfaZzqfvsKxxbUE5Flod7zLVi8U01TA.jpg" width="64"/>
+     <div class="playlist-info">
+      <span class="title">
+       Song Title 2
+      </span>
+      <span class="artist">
+       Artist Name 2
+      </span>
+     </div>
+    </div>
+    <div class="playlist-item">
+     <img alt="Album cover with a colorful geometric pattern" height="64" src="https://storage.googleapis.com/a1aa/image/PC0NacSaICbXM1wtAlQMeNkN3f4IuLuoTd6h6atGRPB9U01TA.jpg" width="64"/>
+     <div class="playlist-info">
+      <span class="title">
+       Song Title 3
+      </span>
+      <span class="artist">
+       Artist Name 3
+      </span>
+     </div>
+    </div>
+    <div class="playlist-item">
+     <img alt="Album cover with a minimalist design in pastel colors" height="64" src="https://storage.googleapis.com/a1aa/image/e9BIFS0ldiS8JCfl4gXoir6eRy65dYS6JesMV6Q8vRfwniueE.jpg" width="64"/>
+     <div class="playlist-info">
+      <span class="title">
+       Song Title 4
+      </span>
+      <span class="artist">
+       Artist Name 4
+      </span>
+     </div>
+    </div>
+    <div class="playlist-item">
+     <img alt="Album cover with a vintage photo of a band" height="64" src="https://storage.googleapis.com/a1aa/image/OrSmY2c1WyJoEVQc87qKxZm3TTPNIxjnPaq1ddKtV4tQFd9E.jpg" width="64"/>
+     <div class="playlist-info">
+      <span class="title">
+       Song Title 5
+      </span>
+      <span class="artist">
+       Artist Name 5
+      </span>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   document.querySelector('.home-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Home link clicked!');
+        });
+
+        document.querySelector('.search-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Search link clicked!');
+        });
+
+        document.querySelector('.library-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Your Library link clicked!');
+        });
+
+        document.querySelector('.create-playlist-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Create Playlist link clicked!');
+        });
+
+        document.querySelector('.liked-songs-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Liked Songs link clicked!');
+        });
+  </script>
+ </body>
+</html>
